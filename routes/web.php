@@ -2,8 +2,7 @@
 
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
-
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
-Route::resource('users',PostController::class);
+Route::resource('posts',PostController::class)->names('posts');
